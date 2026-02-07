@@ -2,6 +2,8 @@
 
 echo "[+] Installing recon tools..."
 
+sudo apt install -y subfinder assetfinder dirsearch arjun paramspider jq
+
 echo "  -> katana"
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 
@@ -17,12 +19,13 @@ go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 echo "  -> httprobe"
 go install github.com/tomnomnom/httprobe@latest
 
-echo "  -> aquatone"
-go install github.com/michenriksen/aquatone@latest
+echo "  -> gowitness"
+go install github.com/sensepost/gowitness@latest
+
 
 echo "[+] Installation complete 🎉"
 
 sudo cp /home/kali/go/bin/* /usr/local/bin/
 
 echo "[+] Installed tools:"
-which katana gau waybackurls httpx httprobe aquatone
+which katana gau waybackurls httpx httprobe gowitness
